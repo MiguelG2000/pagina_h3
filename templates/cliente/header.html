@@ -1,0 +1,44 @@
+<header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-brand-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="#" class="text-3xl font-black tracking-tighter text-brand-black dark:text-white">
+                    <span class="text-brand-red">H3</span> CONTEMPORÁNEAS
+                </a>
+            </div>
+            
+            <!-- Menú Desktop -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#hero" class="hover:text-brand-red font-semibold transition-colors">Inicio</a>
+                <a href="#nosotros" class="hover:text-brand-red font-semibold transition-colors">Nosotros</a>
+                <a href="#servicios" class="hover:text-brand-red font-semibold transition-colors">Servicios</a>
+                <a href="#portafolio" class="hover:text-brand-red font-semibold transition-colors">Portafolio</a>
+                <a href="#contacto" class="hover:text-brand-red font-semibold transition-colors">Contacto</a>
+                
+                <!-- Botón Tema -->
+                <button onclick="toggleTheme()" id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-brand-gray text-gray-800 dark:text-white hover:bg-brand-red hover:text-white transition-all">
+                    <!-- Icono Sol/Luna genérico (puedes sustituir por SVG) -->
+                    🌓
+                </button>
+            </nav>
+
+            <!-- Botón Móvil -->
+            <div class="md:hidden flex items-center gap-4">
+                <button onclick="toggleTheme()" class="p-2 rounded-full bg-gray-200 dark:bg-brand-gray">🌓</button>
+                <button onclick="toggleMenu()" class="text-brand-red focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Menú Móvil Desplegable -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-brand-black border-t border-gray-200 dark:border-gray-800">
+        <a href="#hero" class="block px-4 py-3 hover:bg-brand-red hover:text-white transition-colors">Inicio</a>
+        <a href="#nosotros" class="block px-4 py-3 hover:bg-brand-red hover:text-white transition-colors">Nosotros</a>
+        <a href="#servicios" class="block px-4 py-3 hover:bg-brand-red hover:text-white transition-colors">Servicios</a>
+        <a href="#portafolio" class="block px-4 py-3 hover:bg-brand-red hover:text-white transition-colors">Portafolio</a>
+        <a href="#contacto" class="block px-4 py-3 hover:bg-brand-red hover:text-white transition-colors">Contacto</a>
+    </div>
+</header>
