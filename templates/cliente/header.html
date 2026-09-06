@@ -1,44 +1,57 @@
-<header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-brand-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-500">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
+<header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-brand-black/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-500">
+    <div class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 sm:h-20">
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
-                <a href="#" class="text-3xl font-black tracking-tighter text-brand-black dark:text-white">
-                    <span class="text-brand-red">H3</span> CONTEMPORÁNEAS
+                <a href="#hero" class="text-2xl sm:text-3xl font-black tracking-tighter text-brand-black dark:text-white">
+                    <span class="text-brand-red">H3</span> <span class="hidden xs:inline">CONTEMPORÁNEAS</span>
                 </a>
             </div>
             
             <!-- Menú Desktop -->
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#hero" class="hover:text-brand-red font-semibold transition-colors">Inicio</a>
-                <a href="#nosotros" class="hover:text-brand-red font-semibold transition-colors">Nosotros</a>
-                <a href="#servicios" class="hover:text-brand-red font-semibold transition-colors">Servicios</a>
-                <a href="#portafolio" class="hover:text-brand-red font-semibold transition-colors">Portafolio</a>
-                <a href="#contacto" class="hover:text-brand-red font-semibold transition-colors">Contacto</a>
+            <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+                <a href="#hero" class="hover:text-brand-red font-semibold transition-colors text-sm xl:text-base">Inicio</a>
+                <a href="#nosotros" class="hover:text-brand-red font-semibold transition-colors text-sm xl:text-base">Nosotros</a>
+                <a href="#servicios" class="hover:text-brand-red font-semibold transition-colors text-sm xl:text-base">Servicios</a>
+                <a href="#portafolio" class="hover:text-brand-red font-semibold transition-colors text-sm xl:text-base">Portafolio</a>
+                <a href="#contacto" class="hover:text-brand-red font-semibold transition-colors text-sm xl:text-base">Contacto</a>
                 
                 <!-- Botón Tema -->
-                <button onclick="toggleTheme()" id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-brand-gray text-gray-800 dark:text-white hover:bg-brand-red hover:text-white transition-all">
-                    <!-- Icono Sol/Luna genérico (puedes sustituir por SVG) -->
-                    🌓
+                <button onclick="toggleTheme()" id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-brand-gray text-gray-800 dark:text-white hover:bg-brand-red hover:text-white transition-all" aria-label="Cambiar tema">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
                 </button>
             </nav>
 
             <!-- Botón Móvil -->
-            <div class="md:hidden flex items-center gap-4">
-                <button onclick="toggleTheme()" class="p-2 rounded-full bg-gray-200 dark:bg-brand-gray">🌓</button>
-                <button onclick="toggleMenu()" class="text-brand-red focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <div class="lg:hidden flex items-center gap-2 sm:gap-4">
+                <button onclick="toggleTheme()" class="p-2 rounded-full bg-gray-200 dark:bg-brand-gray" aria-label="Cambiar tema">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <button onclick="toggleMenu()" class="text-brand-red focus:outline-none p-2" aria-label="Menú">
+                    <i id="menu-icon" class="fas fa-bars text-2xl sm:text-3xl"></i>
                 </button>
             </div>
         </div>
     </div>
     
     <!-- Menú Móvil Desplegable -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-brand-black border-t border-gray-200 dark:border-gray-800">
-        <a href="#hero" class="block px-4 py-3 hover:bg-brand-red hover:text-white transition-colors">Inicio</a>
-        <a href="#nosotros" class="block px-4 py-3 hover:bg-brand-red hover:text-white transition-colors">Nosotros</a>
-        <a href="#servicios" class="block px-4 py-3 hover:bg-brand-red hover:text-white transition-colors">Servicios</a>
-        <a href="#portafolio" class="block px-4 py-3 hover:bg-brand-red hover:text-white transition-colors">Portafolio</a>
-        <a href="#contacto" class="block px-4 py-3 hover:bg-brand-red hover:text-white transition-colors">Contacto</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-brand-black border-t border-gray-200 dark:border-gray-800 shadow-2xl">
+        <a href="#hero" class="block px-6 py-4 hover:bg-brand-red hover:text-white transition-colors font-semibold">
+            <i class="fas fa-home mr-3"></i>Inicio
+        </a>
+        <a href="#nosotros" class="block px-6 py-4 hover:bg-brand-red hover:text-white transition-colors font-semibold">
+            <i class="fas fa-users mr-3"></i>Nosotros
+        </a>
+        <a href="#servicios" class="block px-6 py-4 hover:bg-brand-red hover:text-white transition-colors font-semibold">
+            <i class="fas fa-tools mr-3"></i>Servicios
+        </a>
+        <a href="#portafolio" class="block px-6 py-4 hover:bg-brand-red hover:text-white transition-colors font-semibold">
+            <i class="fas fa-folder-open mr-3"></i>Portafolio
+        </a>
+        <a href="#contacto" class="block px-6 py-4 hover:bg-brand-red hover:text-white transition-colors font-semibold">
+            <i class="fas fa-envelope mr-3"></i>Contacto
+        </a>
     </div>
 </header>
