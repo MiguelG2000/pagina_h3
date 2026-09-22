@@ -1,3 +1,4 @@
+{% load static %}
 <section id="contacto" class="py-16 sm:py-20 lg:py-24 bg-gray-100 dark:bg-gray-900 bg-cover transition-colors duration-500">
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -9,12 +10,12 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             
-            <!-- Columna Izquierda: Datos -->
+            <!-- Columna Izquierda: Datos y Mapa Interactivo -->
             <div class="bg-white dark:bg-brand-black/50 p-6 sm:p-8 lg:p-12 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800" data-aos="fade-right">
                 <ul class="space-y-4 sm:space-y-6 mb-8 sm:mb-10 text-gray-700 dark:text-gray-200 text-sm sm:text-base">
                     <li class="flex items-start gap-4">
                         <span class="text-brand-red text-xl sm:text-2xl"><i class="fas fa-map-marker-alt"></i></span>
-                        <span class="flex-1">Calle San Francisco de Asís #292, Col Adonahi, Tuxtla Gtz, Chis.</span>
+                        <span class="flex-1">Carretera Tuxtla-San Fernando km 8.5, Tuxtla Gutiérrez, Chis., C.P. 29129</span>
                     </li>
                     <li class="flex items-center gap-4">
                         <span class="text-brand-red text-xl sm:text-2xl"><i class="fas fa-phone"></i></span>
@@ -28,25 +29,26 @@
 
                 <!-- Redes y Descargas -->
                 <div class="flex gap-4 mb-8 sm:mb-10 border-t border-gray-200 dark:border-gray-800 pt-6 sm:pt-8">
-                    <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-brand-red text-white rounded-full hover:bg-brand-darkred transition-colors">
+                    <a href="https://www.facebook.com/h3construccionescontemporaneas" class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-brand-red text-white rounded-full hover:bg-brand-darkred transition-colors">
                         <i class="fab fa-facebook-f text-lg sm:text-xl"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-brand-red text-white rounded-full hover:bg-brand-darkred transition-colors">
-                        <i class="fab fa-instagram text-lg sm:text-xl"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-brand-red text-white rounded-full hover:bg-brand-darkred transition-colors">
-                        <i class="fab fa-linkedin-in text-lg sm:text-xl"></i>
                     </a>
                 </div>
                 <div class="space-y-4">
-                    <a href="#" class="flex items-center gap-3 text-brand-red hover:text-brand-darkred font-semibold transition-colors text-sm sm:text-base">
+                    <a href="{% static 'pdf/portafolio.pdf' %}" class="flex items-center gap-3 text-brand-red hover:text-brand-darkred font-semibold transition-colors text-sm sm:text-base">
                         <i class="fas fa-download"></i> Descargar Portafolio de Obras
                     </a>
                 </div>
                 
-                <!-- Mapa placeholder -->
-                <div class="mt-6 sm:mt-8 h-40 sm:h-48 w-full bg-gray-300 dark:bg-gray-800 rounded-xl overflow-hidden flex items-center justify-center text-sm text-gray-500">
-                    <i class="fas fa-map-marked-alt mr-2"></i>Google Maps
+                <!-- Mapa Interactivo con Google Maps -->
+                <div class="mt-6 sm:mt-8 h-52 sm:h-64 w-full bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-inner border border-gray-300 dark:border-gray-700">
+                    <iframe 
+                        title="Ubicación de H3 Construcciones Contemporáneas"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.570776739665!2d-93.1678121!3d16.8003183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd73072c67921%3A0xcfe60934ad77dfdb!2sH3%20CONSTRUCCIONES%20CONTEMPORANEAS%20S.A.%20DE%20C.V.!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
 
