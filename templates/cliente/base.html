@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>H3 Construcciones Contemporáneas</title>
+    <title>GRUPO H3 - Construcción, Grúas, Estructuras y Logística</title>
     
     <!-- Tailwind CSS (CDN para desarrollo) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -48,19 +48,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
-        /* Estilos personalizados para mejorar responsive */
         .text-justify-custom {
             text-align: justify;
             text-justify: inter-word;
         }
-        
-        /* Asegurar que los formularios no se desborden */
         input, textarea, select {
             max-width: 100%;
             box-sizing: border-box;
         }
-        
-        /* Mejorar scroll en mobile */
         @media (max-width: 768px) {
             body {
                 overflow-x: hidden;
@@ -72,11 +67,12 @@
 
     {% include 'cliente/header.html' %}
     
-    <main class="flex-1 w-full overflow-x-hidden">
+    <main class="flex-1 w-full overflow-x-hidden pt-16 sm:pt-20">
         {% include 'cliente/hero.html' %}
         {% include 'cliente/nosotros.html' %}
         {% include 'cliente/valores.html' %}
         {% include 'cliente/servicios.html' %}
+        {% include 'cliente/equipo_carga.html' %}
         {% include 'cliente/portafolio.html' %}
         {% include 'cliente/contacto.html' %}
     </main>
@@ -89,9 +85,7 @@
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-    <!-- Scripts Funcionales -->
     <script>
-        // Inicializar animaciones de scroll
         AOS.init({
             once: false,
             mirror: true,
@@ -99,8 +93,6 @@
             offset: 100,
         });
 
-        // Lógica de Modo Claro / Oscuro
-        const themeToggleBtn = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
         
         function getTheme() {
@@ -119,7 +111,6 @@
             }
         }
 
-        // Aplicar tema inicial
         applyTheme(getTheme());
 
         function toggleTheme() {
@@ -129,12 +120,10 @@
             localStorage.setItem('theme', newTheme);
         }
 
-        // Lógica Menú Móvil
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
             
-            // Cambiar icono del botón hamburguesa
             const icon = document.getElementById('menu-icon');
             if (icon) {
                 if (menu.classList.contains('hidden')) {
@@ -147,7 +136,6 @@
             }
         }
 
-        // Cerrar menú al hacer clic en un enlace
         document.addEventListener('click', function(e) {
             const mobileMenu = document.getElementById('mobile-menu');
             const menuButton = e.target.closest('[onclick="toggleMenu()"]');

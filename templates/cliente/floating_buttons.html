@@ -1,67 +1,77 @@
 <!-- Botones Flotantes (Globales) -->
-<div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-3 sm:gap-4">
+<div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3">
+    
+    <!-- Menú Desplegable Flotante de Contacto Rápido por Área -->
+    <div id="floatingQuickMenu" class="hidden bg-white dark:bg-brand-gray border border-gray-200 dark:border-gray-700 rounded-2xl shadow-2xl p-3 w-56 transform transition-all duration-300">
+        <div class="text-[11px] font-extrabold uppercase tracking-wider text-brand-red mb-2 px-2 flex justify-between items-center">
+            <span>Contacto Rápido</span>
+            <button onclick="toggleQuickMenu()" class="text-gray-400 hover:text-red-500">&times;</button>
+        </div>
+        <div class="space-y-1">
+            <button onclick="selectQuickContact('H3 Construcciones')" class="w-full text-left px-3 py-2 text-xs font-semibold rounded-lg hover:bg-brand-red hover:text-white transition-colors flex items-center gap-2">
+                <i class="fas fa-building text-brand-red w-4"></i> H3 Construcciones
+            </button>
+            <button onclick="selectQuickContact('H3 Grúas')" class="w-full text-left px-3 py-2 text-xs font-semibold rounded-lg hover:bg-brand-red hover:text-white transition-colors flex items-center gap-2">
+                <i class="fas fa-truck-monster text-brand-red w-4"></i> H3 Grúas
+            </button>
+            <button onclick="selectQuickContact('H3 Logística')" class="w-full text-left px-3 py-2 text-xs font-semibold rounded-lg hover:bg-brand-red hover:text-white transition-colors flex items-center gap-2">
+                <i class="fas fa-truck text-brand-red w-4"></i> H3 Logística
+            </button>
+            <button onclick="selectQuickContact('Estructuras')" class="w-full text-left px-3 py-2 text-xs font-semibold rounded-lg hover:bg-brand-red hover:text-white transition-colors flex items-center gap-2">
+                <i class="fas fa-cubes text-brand-red w-4"></i> Estructuras
+            </button>
+        </div>
+    </div>
+
+    <!-- Botón Principal Flotante (Desplegable de Contacto) -->
+    <button onclick="toggleQuickMenu()" 
+            class="group relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-brand-red hover:bg-brand-darkred rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 text-white" 
+            aria-label="Contacto Rápido por Área">
+        <i class="fas fa-headset text-xl sm:text-2xl lg:text-3xl"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-full mr-3 px-3 py-1.5 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+            Contacto por Área
+        </span>
+    </button>
+
     <!-- Botón WhatsApp -->
-    <a href="https://wa.me/529612121795" target="_blank" 
+    <a href="https://wa.me/529616936644" target="_blank" 
        class="group relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300" 
        aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp text-2xl sm:text-3xl lg:text-4xl text-white"></i>
-        <!-- Tooltip -->
-        <span class="absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-xs sm:text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+        <span class="absolute right-full mr-3 px-3 py-1.5 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
             WhatsApp
-            <span class="absolute left-full top-1/2 -translate-y-1/2 border-8 border-transparent border-l-gray-900"></span>
-        </span>
-        <!-- Indicador de notificación -->
-        <span class="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-red-500 rounded-full border-2 border-white animate-pulse"></span>
-    </a>
-    
-    <!-- Botón Llamada -->
-    <a href="tel:+529612121795" 
-       class="group relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300" 
-       aria-label="Llamar por teléfono">
-        <i class="fas fa-phone text-xl sm:text-2xl lg:text-3xl text-white"></i>
-        <!-- Tooltip -->
-        <span class="absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-xs sm:text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-            Llamar ahora
-            <span class="absolute left-full top-1/2 -translate-y-1/2 border-8 border-transparent border-l-gray-900"></span>
-        </span>
-    </a>
-    
-    <!-- Botón Email -->
-    <a href="mailto:h3construccionescontemporaneas@gmail.com" 
-       class="group relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-brand-red to-brand-darkred rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300" 
-       aria-label="Enviar correo electrónico">
-        <i class="fas fa-envelope text-xl sm:text-2xl lg:text-3xl text-white"></i>
-        <!-- Tooltip -->
-        <span class="absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-xs sm:text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-            Enviar email
-            <span class="absolute left-full top-1/2 -translate-y-1/2 border-8 border-transparent border-l-gray-900"></span>
         </span>
     </a>
     
     <!-- Botón Volver Arriba -->
     <button onclick="scrollToTop()" 
-            class="group relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 hidden" 
+            class="group relative w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-brand-red transition-all duration-300 hidden" 
             id="scrollTopBtn" 
             aria-label="Volver arriba">
-        <i class="fas fa-chevron-up text-xl sm:text-2xl lg:text-3xl text-white"></i>
-        <!-- Tooltip -->
-        <span class="absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-xs sm:text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-            Volver arriba
-            <span class="absolute left-full top-1/2 -translate-y-1/2 border-8 border-transparent border-l-gray-900"></span>
-        </span>
+        <i class="fas fa-chevron-up text-sm sm:text-base"></i>
     </button>
 </div>
 
 <script>
-    // Función para volver arriba
+    function toggleQuickMenu() {
+        const menu = document.getElementById('floatingQuickMenu');
+        menu.classList.toggle('hidden');
+    }
+
+    function selectQuickContact(empresa) {
+        toggleQuickMenu();
+        if (typeof openAreaContact === 'function') {
+            openAreaContact(empresa, empresa);
+        } else {
+            window.location.hash = '#contacto';
+        }
+    }
+
     function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     
-    // Mostrar/ocultar botón "Volver arriba" según scroll
     window.addEventListener('scroll', function() {
         const scrollTopBtn = document.getElementById('scrollTopBtn');
         if (window.scrollY > 300) {
