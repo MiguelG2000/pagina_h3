@@ -1,3 +1,5 @@
+{% load static %}
+
 <section id="equipo-carga" class="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-brand-black transition-colors duration-500">
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 sm:mb-16" data-aos="fade-down">
@@ -8,158 +10,321 @@
             </p>
         </div>
 
-        <!-- Tarjetas del Catálogo de Grúas -->
+        <!-- Grid del Catálogo de Grúas -->
         <div id="grid-gruas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- 1. 130 TON -->
-            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">130 TONELADAS</span>
-                    <i class="fas fa-truck-monster text-brand-red text-xl"></i>
+            <!-- 1. 130 TON (VISIBLE) -->
+            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between" data-aos="fade-up">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Grúa de 130 Toneladas')">
+                        <img src="{% static 'images/gruas/grua_130t.png' %}" alt="Grúa de 130 Toneladas" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">130 TONELADAS</span>
+                        <i class="fas fa-truck-monster text-brand-red text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grúa de 130 Toneladas</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Hidráulica Montada sobre Camión</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Pluma telescópica, color gris con detalles verde limón. 4 ejes en chasis y estabilizadores laterales.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grúa de 130 Toneladas</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Grúa Hidráulica Montada sobre Camión</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Pluma telescópica, color gris con detalles verde limón. 4 ejes en chasis (8 llantas) y estabilizadores laterales.</p>
             </div>
 
-            <!-- 2. Grove TM-1075 -->
-            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up" data-aos-delay="50">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">100 TONELADAS</span>
-                    <span class="text-xs font-bold text-gray-400">GROVE</span>
+            <!-- 2. Grove TM-1075 (VISIBLE) -->
+            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="50">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Grove TM-1075 100T')">
+                        <img src="{% static 'images/gruas/groove_100t.png' %}" alt="Grove TM-1075" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">100 TONELADAS</span>
+                        <span class="text-xs font-bold text-gray-400">GROVE</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grove TM-1075</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Todo Terreno (AT)</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Color amarillo, pluma telescópica, 5 ejes en chasis de gran soporte.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grove TM-1075</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Grúa Todo Terreno (AT)</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Color amarillo, pluma telescópica, 5 ejes en chasis de gran soporte.</p>
             </div>
 
-            <!-- 3. Link-Belt 100 T -->
-            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">100 TONELADAS</span>
-                    <span class="text-xs font-bold text-gray-400">LINK-BELT</span>
+            <!-- 3. Link-Belt 100 T (VISIBLE) -->
+            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Link-Belt 100T')">
+                        <img src="{% static 'images/gruas/linkbelt_100t.png' %}" alt="Link-Belt 100T" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">100 TONELADAS</span>
+                        <span class="text-xs font-bold text-gray-400">LINK-BELT</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Link-Belt 100T</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Montada sobre Camión</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Color blanco con franjas rojas, pluma telescópica y 4 ejes.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Link-Belt 100T</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Grúa Montada sobre Camión</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Color blanco con franjas rojas, pluma telescópica y 4 ejes.</p>
             </div>
 
-            <!-- 4. Grove TMS900E -->
-            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up" data-aos-delay="150">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">90 TONELADAS</span>
-                    <span class="text-xs font-bold text-gray-400">GROVE TMS900E</span>
+            <!-- 4. Grove TMS900E (VISIBLE) -->
+            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="150">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Grove TMS900E 90T')">
+                        <img src="{% static 'images/gruas/grua_90t.png' %}" alt="Grove TMS900E" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">90 TONELADAS</span>
+                        <span class="text-xs font-bold text-gray-400">GROVE TMS900E</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grove TMS900E</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Montada sobre Camión</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Color blanco con detalles en rojo y negro, pluma telescópica, 4 ejes.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grove TMS900E</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Grúa Montada sobre Camión</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Color blanco con detalles en rojo y negro, pluma telescópica, 4 ejes.</p>
             </div>
 
-            <!-- 5. 75 TON -->
-            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up" data-aos-delay="200">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">75 TONELADAS</span>
-                    <i class="fas fa-crane text-brand-red text-xl"></i>
+            <!-- 5. 75 TON (VISIBLE) -->
+            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Grúa de 75 Toneladas')">
+                        <img src="{% static 'images/gruas/grua_75t.png' %}" alt="Grúa de 75 Toneladas" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">75 TONELADAS</span>
+                        <i class="fas fa-crane text-brand-red text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grúa de 75 Toneladas</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Todo Terreno (Celosía)</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Pluma de celosía (retícula), color blanco con franja roja, 4 ejes.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grúa de 75 Toneladas</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Grúa Todo Terreno (Celosía)</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Pluma de celosía (retícula), color blanco con franja roja, 4 ejes.</p>
             </div>
 
-            <!-- 6. Link-Belt HTC-8670 -->
-            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up" data-aos-delay="250">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">70 TONELADAS</span>
-                    <span class="text-xs font-bold text-gray-400">LINK-BELT HTC-8670</span>
+            <!-- 6. Link-Belt HTC-8670 (VISIBLE) -->
+            <div class="grua-card bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="250">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Link-Belt HTC-8670 70T')">
+                        <img src="{% static 'images/gruas/grua_70t.png' %}" alt="Link-Belt HTC-8670" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">70 TONELADAS</span>
+                        <span class="text-xs font-bold text-gray-400">LINK-BELT HTC-8670</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Link-Belt HTC-8670</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Montada sobre Camión</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Color blanco con detalles en rojo, pluma de celosía y 3 ejes.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Link-Belt HTC-8670</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Grúa Montada sobre Camión</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Color blanco con detalles en rojo, pluma de celosía y 3 ejes.</p>
             </div>
 
-            <!-- ====== TARJETAS OCULTAS (se muestran con "Ver todo") ====== -->
+            <!-- ====== TARJETAS OCULTAS ====== -->
             
             <!-- 7. Link-Belt HTC-8665 -->
-            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">65 TONELADAS</span>
-                    <span class="text-xs font-bold text-gray-400">LINK-BELT HTC-8665</span>
+            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Link-Belt HTC-8665 65T')">
+                        <img src="{% static 'images/gruas/grua_65t.png' %}" alt="Link-Belt HTC-8665" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">65 TONELADAS</span>
+                        <span class="text-xs font-bold text-gray-400">LINK-BELT HTC-8665</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Link-Belt HTC-8665</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Montada sobre Camión</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Pluma telescópica, 3 ejes, estabilizadores extendidos para máxima seguridad.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Link-Belt HTC-8665</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Grúa Montada sobre Camión</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Pluma telescópica, 3 ejes, estabilizadores extendidos para máxima seguridad.</p>
             </div>
 
             <!-- 8. Grove 60T -->
-            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">60 TONELADAS</span>
-                    <span class="text-xs font-bold text-gray-400">GROVE RT</span>
+            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Grove 60 Toneladas')">
+                        <img src="{% static 'images/gruas/grua_60t.png' %}" alt="Grove 60T" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">60 TONELADAS</span>
+                        <span class="text-xs font-bold text-gray-400">GROVE RT</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grove 60 Toneladas</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Todo Terreno (RT)</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Color amarillo con negro, pluma telescópica y 2 ejes grandes.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grove 60 Toneladas</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Grúa Todo Terreno (RT)</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Color amarillo con negro, pluma telescópica y 2 ejes grandes.</p>
             </div>
 
             <!-- 9. Terex 55T -->
-            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">55 TONELADAS</span>
-                    <span class="text-xs font-bold text-gray-400">TEREX RT</span>
+            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Terex 55 Toneladas')">
+                        <img src="{% static 'images/gruas/grua_55t.png' %}" alt="Terex 55T" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">55 TONELADAS</span>
+                        <span class="text-xs font-bold text-gray-400">TEREX RT</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Terex 55 Toneladas</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Todo Terreno (RT)</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Color blanco con azul, pluma telescópica y 2 ejes grandes de maniobra.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Terex 55 Toneladas</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Grúa Todo Terreno (RT)</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Color blanco con azul, pluma telescópica y 2 ejes grandes de maniobra.</p>
             </div>
 
             <!-- 10. Link-Belt RTC8050 -->
-            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">50 TONELADAS</span>
-                    <span class="text-xs font-bold text-gray-400">LINK-BELT RTC8050</span>
+            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Link-Belt RTC8050 50T')">
+                        <img src="{% static 'images/gruas/grua_50t.png' %}" alt="Link-Belt RTC8050" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">50 TONELADAS</span>
+                        <span class="text-xs font-bold text-gray-400">LINK-BELT RTC8050</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Link-Belt RTC8050</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Todo Terreno (RT)</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Color rojo con detalles blancos, pluma telescópica, 2 ejes de alta tracción.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Link-Belt RTC8050</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Grúa Todo Terreno (RT)</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Color rojo con detalles blancos, pluma telescópica, 2 ejes de alta tracción.</p>
             </div>
 
-            <!-- 11. 35 TON -->
-            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">35 TONELADAS</span>
-                    <i class="fas fa-truck text-brand-red text-xl"></i>
+            <!-- 11. Grúa Articulada 35T -->
+            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Grúa Articulada 35T')">
+                        <img src="{% static 'images/gruas/grua_35t.png' %}" alt="Grúa Articulada 35T" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">35 TONELADAS</span>
+                        <i class="fas fa-truck text-brand-red text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grúa Articulada 35T</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Camión con Pluma Articulada</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Color blanco con detalles en rojo, 3 ejes. Rotulación H3 GRUAS en pluma.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grúa Articulada 35T</h4>
-                <p class="text-xs text-brand-red font-semibold mb-3">Camión con Pluma Articulada</p>
-                <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Color blanco con detalles en rojo, 3 ejes. Rotulación H3 GRUAS en pluma.</p>
             </div>
 
-            <!-- 12-19. Equipos de 28T a 7T -->
-            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">28 - 14 TONELADAS</span>
-                    <i class="fas fa-truck text-brand-red text-xl"></i>
+            <!-- 12. Sterling L7500 (28T) -->
+            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between">
+                <div>
+                    <div class="grid grid-cols-2 gap-2 mb-4">
+                        <div class="relative overflow-hidden rounded-xl group cursor-pointer" onclick="openModalFromContainer(this, 'Sterling L7500 28T (Vista 1)')">
+                            <img src="{% static 'images/gruas/grua_28t.png' %}" alt="Sterling L7500" loading="lazy" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="relative overflow-hidden rounded-xl group cursor-pointer" onclick="openModalFromContainer(this, 'Sterling L7500 28T (Vista 2)')">
+                            <img src="{% static 'images/gruas/grua_28t2.png' %}" alt="Sterling L7500 Vista 2" loading="lazy" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">28 TONELADAS</span>
+                        <i class="fas fa-truck text-brand-red text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Sterling L7500</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Articulada Mediana</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Pluma Knuckle Boom sobre chasis Sterling. Excelente maniobrabilidad en espacios reducidos.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grúas Articuladas Medianas</h4>
-                <ul class="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                    <li>• Sterling L7500 (28 TON) - Pluma Knuckle Boom</li>
-                    <li>• Peterbilt / GMC WG (17 TON) - Terex Stinger</li>
-                    <li>• International RT-760E (14 TON)</li>
-                </ul>
             </div>
 
-            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all" data-aos="fade-up">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">10 - 7 TONELADAS</span>
-                    <i class="fas fa-truck text-brand-red text-xl"></i>
+            <!-- 13. Peterbilt / GMC WG (17T) -->
+            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between">
+                <div>
+                    <div class="grid grid-cols-2 gap-2 mb-4">
+                        <div class="relative overflow-hidden rounded-xl group cursor-pointer" onclick="openModalFromContainer(this, 'Peterbilt / GMC WG 17T (Vista 1)')">
+                            <img src="{% static 'images/gruas/grua_17t.png' %}" alt="Peterbilt 17T" loading="lazy" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="relative overflow-hidden rounded-xl group cursor-pointer" onclick="openModalFromContainer(this, 'Peterbilt / GMC WG 17T (Vista 2)')">
+                            <img src="{% static 'images/gruas/grua_17t2.png' %}" alt="Peterbilt 17T Vista 2" loading="lazy" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">17 TONELADAS</span>
+                        <i class="fas fa-truck text-brand-red text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Peterbilt / GMC WG</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Terex Stinger 17 Toneladas</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Equipada con pluma Terex Stinger para maniobras rápidas y transporte medio.</p>
                 </div>
-                <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grúas Livianas y Titán</h4>
-                <ul class="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                    <li>• Grúa 10 TON con Pluma FASSI</li>
-                    <li>• Freightliner 2005 (7 TON)</li>
-                    <li>• Pesci 160 (7 TON)</li>
-                </ul>
             </div>
+
+            <!-- 14. International RT-760E (14T) -->
+            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'International RT-760E 14T')">
+                        <img src="{% static 'images/gruas/grua_14t.png' %}" alt="International RT-760E" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">14 TONELADAS</span>
+                        <i class="fas fa-truck text-brand-red text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">International RT-760E</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Grúa Articulada</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Grúa versátil de capacidad media ideal para carga y descarga en sitio.</p>
+                </div>
+            </div>
+
+            <!-- 15. Grúa 10 TON con Pluma FASSI -->
+            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl mb-4 group cursor-pointer" onclick="openModalFromContainer(this, 'Grúa 10 TON Pluma FASSI')">
+                        <img src="{% static 'images/gruas/grua_10t.png' %}" alt="Grúa 10 TON FASSI" loading="lazy" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                            <i class="fas fa-search-plus text-base"></i> Ampliar foto
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">10 TONELADAS</span>
+                        <i class="fas fa-truck text-brand-red text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grúa 10 Toneladas</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Pluma FASSI / Camión Liviano</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Grúa liviana de respuesta rápida para maniobras ágiles urbanas.</p>
+                </div>
+            </div>
+
+            <!-- 16. Grúas Livianas (7T) -->
+            <div class="grua-card hidden bg-white dark:bg-brand-gray rounded-2xl p-5 shadow-md border border-gray-200 dark:border-gray-800 hover:border-brand-red transition-all flex flex-col justify-between">
+                <div>
+                    <div class="grid grid-cols-2 gap-2 mb-4">
+                        <div class="relative overflow-hidden rounded-xl group cursor-pointer" onclick="openModalFromContainer(this, 'Freightliner 2005 7T')">
+                            <img src="{% static 'images/gruas/grua_7t.png' %}" alt="Freightliner 7T" loading="lazy" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="relative overflow-hidden rounded-xl group cursor-pointer" onclick="openModalFromContainer(this, 'Pesci 160 7T')">
+                            <img src="{% static 'images/gruas/grua_7t2.png' %}" alt="Pesci 160 7T" loading="lazy" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full">7 TONELADAS</span>
+                        <i class="fas fa-truck text-brand-red text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-black dark:text-white mb-1">Grúas Titán y Livianas</h4>
+                    <p class="text-xs text-brand-red font-semibold mb-2">Freightliner 2005 & Pesci 160</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">Equipos livianos de 7 toneladas con brazos articulados para asistencia y fletes ligeros.</p>
+                </div>
+            </div>
+
         </div>
 
         <!-- Botón Ver Todo / Ver Menos -->
@@ -173,7 +338,16 @@
     </div>
 </section>
 
-<!-- Script para mostrar/ocultar las tarjetas -->
+<!-- Modal / Lightbox para ver la imagen en grande -->
+<div id="image-modal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 transition-opacity duration-300" onclick="closeModal()">
+    <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+        <button onclick="closeModal()" class="absolute -top-10 right-0 text-white text-3xl font-bold hover:text-brand-red transition-colors">&times;</button>
+        <img id="modal-img" src="" alt="" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl">
+        <p id="modal-caption" class="text-white text-center mt-3 text-sm font-semibold"></p>
+    </div>
+</div>
+
+<!-- Scripts -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const btn = document.getElementById('btn-ver-todo');
@@ -193,7 +367,6 @@
                 }
             });
 
-            // Cambiar texto e ícono del botón
             if (expandido) {
                 btnTexto.textContent = 'Ver menos';
                 btnIcono.classList.remove('fa-chevron-down');
@@ -202,9 +375,41 @@
                 btnTexto.textContent = 'Ver todo';
                 btnIcono.classList.remove('fa-chevron-up');
                 btnIcono.classList.add('fa-chevron-down');
-                // Opcional: hacer scroll suave hacia la sección al colapsar
                 document.getElementById('equipo-carga').scrollIntoView({ behavior: 'smooth' });
             }
         });
+    });
+
+    // Función optimizada que toma la imagen directamente del contenedor
+    function openModalFromContainer(container, captionText) {
+        const imgElement = container.querySelector('img');
+        if (imgElement && imgElement.src) {
+            openModal(imgElement.src, captionText);
+        }
+    }
+
+    function openModal(imageSrc, captionText) {
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalCaption = document.getElementById('modal-caption');
+
+        modalImg.src = imageSrc;
+        modalCaption.textContent = captionText;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('image-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
     });
 </script>

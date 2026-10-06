@@ -1,59 +1,195 @@
 {% load static %}
-<section id="hero" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden py-20">
+
+<section id="hero" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-28 sm:pt-24 sm:pb-24 select-none">
+
     <!-- Carrusel de imágenes de fondo con Overlay -->
     <div class="absolute inset-0 z-0 overflow-hidden">
-        <!-- Imágenes del carrusel -->
-        <img src="{% static 'images/hero.jpeg' %}" alt="Estructura Metálica 1" class="hero-slide absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out opacity-100" />
-        <img src="{% static 'images/hero2.jpg' %}" alt="Estructura Metálica 2" class="hero-slide absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out opacity-0" />
-        <img src="{% static 'images/hero3.jpg' %}" alt="Estructura Metálica 3" class="hero-slide absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out opacity-0" />
-        
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black/70 dark:bg-black/80"></div>
+        <img src="{% static 'images/hero.jpeg' %}" alt="Estructuras Metálicas H3" class="hero-slide absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out opacity-100" />
+        <img src="{% static 'images/hero2.jpg' %}" alt="Servicio de Grúas H3" class="hero-slide absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out opacity-0" />
+        <img src="{% static 'images/hero3.jpg' %}" alt="Proyectos e Infraestructura H3" class="hero-slide absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out opacity-0" />
+
+        <!-- Overlay oscuro -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/75 to-black/60"></div>
     </div>
 
-    <!-- Contenido -->
-    <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto" data-aos="zoom-in" data-aos-duration="1000">
-        <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 sm:mb-6 tracking-tight">
-            LÍDERES DE LA <span class="text-brand-red">CONSTRUCCIÓN</span>
-        </h1>
-        <h2 class="text-lg sm:text-2xl md:text-3xl text-gray-200 mb-4 sm:mb-8 font-light">
-            Soluciones integrales en montajes y estructuras metálicas
-        </h2>
-        <p class="text-sm sm:text-lg text-gray-300 mb-6 sm:mb-10 max-w-2xl mx-auto px-2">
-            Desarrollamos proyectos de infraestructura pública y privada, cumpliendo con los más altos estándares de calidad.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="#portafolio" class="inline-block bg-brand-red hover:bg-brand-darkred text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(230,0,0,0.4)] text-sm sm:text-base w-full sm:w-auto text-center">
-                <i class="fas fa-briefcase mr-2"></i>Ver Nuestro Trabajo
+    <!-- Contenido Principal -->
+    <div class="relative z-10 w-full max-w-5xl mx-auto px-5 sm:px-10 lg:px-12 flex flex-col items-center text-center">
+
+        <!--
+          Contenedor de textos:
+          Usamos CSS Grid para APILAR los slides en la misma celda.
+          Así el alto lo define el texto más largo (sin alturas fijas)
+          y nunca se desborda ni choca con los botones.
+        -->
+        <div class="grid justify-items-center w-full mb-10 sm:mb-12 lg:mb-14">
+
+            <!-- Slide Content 1: Estructuras -->
+            <div class="hero-text col-start-1 row-start-1 w-full transition-all duration-700 ease-in-out opacity-100 translate-y-0 pointer-events-auto" id="hero-text-0">
+                <h1 class="text-[1.75rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight drop-shadow-lg mb-4 sm:mb-5">
+                    LÍDERES DE LA <span class="text-brand-red">CONSTRUCCIÓN</span>
+                </h1>
+                <h2 class="text-sm sm:text-lg md:text-2xl text-gray-200 font-light leading-snug max-w-3xl mx-auto mb-4 sm:mb-5">
+                    Diseño, Fabricación y Montaje de Estructuras Metálicas
+                </h2>
+                <p class="text-xs sm:text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
+                    Desarrollamos ingeniería avanzada para naves industriales, puentes y edificios comerciales cumpliendo normativas internacionales de calidad.
+                </p>
+            </div>
+
+            <!-- Slide Content 2: Grúas y Izajes -->
+            <div class="hero-text col-start-1 row-start-1 w-full transition-all duration-700 ease-in-out opacity-0 translate-y-4 pointer-events-none" id="hero-text-1">
+                <h1 class="text-[1.75rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight drop-shadow-lg mb-4 sm:mb-5">
+                    IZAJES Y <span class="text-brand-red">MANIOBRAS</span> PESADAS
+                </h1>
+                <h2 class="text-sm sm:text-lg md:text-2xl text-gray-200 font-light leading-snug max-w-3xl mx-auto mb-4 sm:mb-5">
+                    Flota de Grúas Hidráulicas de 7 a 130 Toneladas
+                </h2>
+                <p class="text-xs sm:text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
+                    Contamos con operadores certificados y equipos de alto rendimiento para elevación, montaje de estructuras y logística industrial.
+                </p>
+            </div>
+
+            <!-- Slide Content 3: Proyectos e Infraestructura -->
+            <div class="hero-text col-start-1 row-start-1 w-full transition-all duration-700 ease-in-out opacity-0 translate-y-4 pointer-events-none" id="hero-text-2">
+                <h1 class="text-[1.75rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight drop-shadow-lg mb-4 sm:mb-5">
+                    PROYECTOS INTEGRALES DE <span class="text-brand-red">INFRAESTRUCTURA</span>
+                </h1>
+                <h2 class="text-sm sm:text-lg md:text-2xl text-gray-200 font-light leading-snug max-w-3xl mx-auto mb-4 sm:mb-5">
+                    Obra Pública, Privada, Vías Terrestres e Hidráulicas
+                </h2>
+                <p class="text-xs sm:text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
+                    Ejecución integral llave en mano con respaldo técnico, maquinaria pesada propia y compromiso total de entrega en tiempo récord.
+                </p>
+            </div>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-stretch sm:items-center w-full sm:w-auto">
+            <a href="#equipo-carga"
+               class="inline-flex items-center justify-center bg-brand-red hover:bg-red-700 text-white font-bold py-3.5 sm:py-4 px-8 sm:px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(230,0,0,0.4)] text-sm sm:text-base w-full sm:w-auto whitespace-nowrap">
+                <i class="fas fa-truck-monster mr-2"></i>Ver Equipos y Grúas
             </a>
-            <a href="#contacto" class="inline-block bg-transparent border-2 border-white hover:border-brand-red hover:bg-brand-red text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full transition-all transform hover:scale-105 text-sm sm:text-base w-full sm:w-auto text-center">
-                <i class="fas fa-envelope mr-2"></i>Contactar
+            <a href="#contacto"
+               class="inline-flex items-center justify-center bg-transparent border-2 border-white hover:border-brand-red hover:bg-brand-red text-white font-bold py-3.5 sm:py-4 px-8 sm:px-10 rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base w-full sm:w-auto whitespace-nowrap">
+                <i class="fas fa-envelope mr-2"></i>Cotizar Proyecto
             </a>
         </div>
     </div>
+
+    <!-- Flecha Izquierda (abajo en móvil, lateral en escritorio) -->
+    <button id="prev-slide"
+            class="absolute z-20 left-4 bottom-7 sm:bottom-auto sm:left-6 sm:top-1/2 sm:-translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 border border-white/20 text-white hover:bg-brand-red hover:border-brand-red transition-all flex items-center justify-center focus:outline-none"
+            aria-label="Anterior foto">
+        <i class="fas fa-chevron-left text-base sm:text-lg"></i>
+    </button>
+
+    <!-- Flecha Derecha (abajo en móvil, lateral en escritorio) -->
+    <button id="next-slide"
+            class="absolute z-20 right-4 bottom-7 sm:bottom-auto sm:right-6 sm:top-1/2 sm:-translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 border border-white/20 text-white hover:bg-brand-red hover:border-brand-red transition-all flex items-center justify-center focus:outline-none"
+            aria-label="Siguiente foto">
+        <i class="fas fa-chevron-right text-base sm:text-lg"></i>
+    </button>
+
+    <!-- Puntos de Navegación / Dots -->
+    <div class="absolute z-20 bottom-9 sm:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3">
+        <button class="hero-dot w-3 h-3 rounded-full bg-brand-red transition-all scale-125" data-index="0" aria-label="Diapositiva 1"></button>
+        <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-index="1" aria-label="Diapositiva 2"></button>
+        <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-index="2" aria-label="Diapositiva 3"></button>
+    </div>
 </section>
 
-<!-- Script para la transición automática del carrusel -->
+<!-- Script Optimizado sin Timers Conflictivos -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const slides = document.querySelectorAll('.hero-slide');
-        let currentSlide = 0;
-        const intervalTime = 5000; // Tiempo en milisegundos entre cada cambio (5 segundos)
+        const textSlides = document.querySelectorAll('.hero-text');
+        const dots = document.querySelectorAll('.hero-dot');
+        const btnPrev = document.getElementById('prev-slide');
+        const btnNext = document.getElementById('next-slide');
+        const heroSection = document.getElementById('hero');
 
-        function nextSlide() {
-            // Oculta la imagen actual
-            slides[currentSlide].classList.remove('opacity-100');
-            slides[currentSlide].classList.add('opacity-0');
+        let currentIndex = 0;
+        let slideInterval;
+        const intervalTime = 6000;
 
-            // Calcula el índice de la siguiente imagen
-            currentSlide = (currentSlide + 1) % slides.length;
+        function showSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
 
-            // Muestra la siguiente imagen
-            slides[currentSlide].classList.remove('opacity-0');
-            slides[currentSlide].classList.add('opacity-100');
+            currentIndex = index;
+
+            // Actualizar Imágenes
+            slides.forEach((slide, i) => {
+                if (i === currentIndex) {
+                    slide.classList.remove('opacity-0');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0');
+                }
+            });
+
+            // Actualizar Textos mediante opacidad y transformación CSS
+            textSlides.forEach((text, i) => {
+                if (i === currentIndex) {
+                    text.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+                    text.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                } else {
+                    text.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                    text.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+                }
+            });
+
+            // Actualizar Puntos (Dots)
+            dots.forEach((dot, i) => {
+                if (i === currentIndex) {
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-brand-red', 'scale-125');
+                } else {
+                    dot.classList.remove('bg-brand-red', 'scale-125');
+                    dot.classList.add('bg-white/50');
+                }
+            });
         }
 
-        // Inicia el intervalo
-        setInterval(nextSlide, intervalTime);
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        function startTimer() {
+            stopTimer();
+            slideInterval = setInterval(nextSlide, intervalTime);
+        }
+
+        function stopTimer() {
+            if (slideInterval) clearInterval(slideInterval);
+        }
+
+        btnNext.addEventListener('click', () => {
+            nextSlide();
+            startTimer();
+        });
+
+        btnPrev.addEventListener('click', () => {
+            prevSlide();
+            startTimer();
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const index = parseInt(e.target.dataset.index);
+                showSlide(index);
+                startTimer();
+            });
+        });
+
+        heroSection.addEventListener('mouseenter', stopTimer);
+        heroSection.addEventListener('mouseleave', startTimer);
+
+        startTimer();
     });
 </script>
