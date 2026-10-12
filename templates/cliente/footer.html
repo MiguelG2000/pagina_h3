@@ -1,58 +1,125 @@
-<footer class="bg-brand-black text-white py-8 sm:py-12 border-t border-brand-red border-opacity-30 mt-auto">
+<footer class="bg-brand-black text-white py-12 sm:py-16 border-t border-brand-red/30 mt-auto">
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+        
+        <!-- Grid Principal del Footer -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-12">
             
-            <div>
-                <h5 class="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
+            <!-- Columna 1: Información Corporativa Principal -->
+            <div class="space-y-4">
+                <h5 class="text-xl font-bold flex items-center gap-2">
                     <span class="text-brand-red font-black">GRUPO</span>
                     <span class="bg-brand-red text-white px-2 py-0.5 rounded text-base font-extrabold">H3</span>
                 </h5>
-                <p class="text-xs sm:text-sm text-gray-400 mb-2">H3 CONSTRUCCIONES CONTEMPORANEAS S.A. DE C.V.</p>
-                <p class="text-xs sm:text-sm text-gray-400 mb-4">RFC: HCC130521KC2 | REPSE: 142472</p>
-                
-                <div class="flex gap-3">
-                    <a href="https://facebook.com" target="_blank" class="w-8 h-8 flex items-center justify-center bg-brand-red/20 text-brand-red rounded-full hover:bg-brand-red hover:text-white transition-colors">
-                        <i class="fab fa-facebook-f text-sm"></i>
-                    </a>
-                    <a href="https://instagram.com" target="_blank" class="w-8 h-8 flex items-center justify-center bg-brand-red/20 text-brand-red rounded-full hover:bg-brand-red hover:text-white transition-colors">
-                        <i class="fab fa-instagram text-sm"></i>
-                    </a>
-                    <a href="https://tiktok.com" target="_blank" class="w-8 h-8 flex items-center justify-center bg-brand-red/20 text-brand-red rounded-full hover:bg-brand-red hover:text-white transition-colors">
-                        <i class="fab fa-tiktok text-sm"></i>
-                    </a>
+                <p class="text-xs text-gray-300 font-semibold uppercase tracking-wider">H3 Construcciones Contemporáneas S.A. de C.V.</p>
+                <div class="text-xs text-gray-400 space-y-1">
+                    <p><span class="font-semibold text-gray-300">RFC:</span> HCC130521KC2</p>
+                    <p><span class="font-semibold text-gray-300">REPSE:</span> 142472</p>
+                    <p class="pt-2 flex items-start gap-2">
+                        <i class="fas fa-map-marker-alt text-brand-red mt-0.5"></i>
+                        <span>Carretera Tuxtla-San Fernando km 8.5, Tuxtla Gutiérrez, Chis., C.P. 29129</span>
+                    </p>
                 </div>
             </div>
 
+            <!-- Columna 2: Navegación del Sitio -->
             <div>
-                <h5 class="text-lg sm:text-xl font-bold mb-4 flex items-center">
-                    <i class="fas fa-tools mr-2 text-brand-red"></i>Áreas de Negocio
+                <h5 class="text-base font-bold mb-4 flex items-center gap-2 text-white border-b border-gray-800 pb-2">
+                    <i class="fas fa-link text-brand-red"></i> Secciones
                 </h5>
-                <ul class="space-y-2 text-xs sm:text-sm text-gray-400">
-                    <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-brand-red text-xs"></i> Grúas e Izajes</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-brand-red text-xs"></i> Estructuras Metálicas</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-brand-red text-xs"></i> Proyectos de Infraestructura</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-brand-red text-xs"></i> Logística y Transportación</li>
+                <ul class="grid grid-cols-2 lg:grid-cols-1 gap-2 text-xs sm:text-sm text-gray-400">
+                    <li><a href="#hero" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-brand-red"></i> Inicio</a></li>
+                    <li><a href="#nosotros" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-brand-red"></i> Nosotros</a></li>
+                    <li><a href="#servicios" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-brand-red"></i> Nuestros Servicios</a></li>
+                    <li><a href="#equipo-carga" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-brand-red"></i> Equipo de Carga</a></li>
+                    <li><a href="#portafolio" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-brand-red"></i> Portafolio</a></li>
+                    <li><a href="#contacto" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-brand-red"></i> Contactos</a></li>
                 </ul>
             </div>
 
-            <div>
-                <h5 class="text-lg sm:text-xl font-bold mb-4 flex items-center">
-                    <i class="fas fa-link mr-2 text-brand-red"></i>Enlaces Rápidos
+            <!-- Columna 3 & 4: Áreas del Grupo H3 (2 columnas) -->
+            <div class="lg:col-span-2">
+                <h5 class="text-base font-bold mb-4 flex items-center gap-2 text-white border-b border-gray-800 pb-2">
+                    <i class="fas fa-building text-brand-red"></i> Unidades de Negocio y Contactos
                 </h5>
-                <ul class="space-y-2 text-xs sm:text-sm text-gray-400">
-                    <li><a href="#hero" class="hover:text-brand-red transition-colors">Inicio</a></li>
-                    <li><a href="#nosotros" class="hover:text-brand-red transition-colors">Nosotros</a></li>
-                    <li><a href="#servicios" class="hover:text-brand-red transition-colors">Servicios</a></li>
-                    <li><a href="#equipo-carga" class="hover:text-brand-red transition-colors">Equipo de Carga</a></li>
-                    <li><a href="#portafolio" class="hover:text-brand-red transition-colors">Portafolio</a></li>
-                    <li><a href="#contacto" class="hover:text-brand-red transition-colors">Contacto General</a></li>
-                </ul>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+                    
+                    <!-- H3 Construcciones -->
+                    <div class="bg-zinc-900/60 p-3.5 rounded-xl border border-zinc-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <h6 class="font-bold text-white text-sm flex items-center gap-1.5">
+                                <i class="fas fa-building text-brand-red"></i> H3 Construcciones
+                            </h6>
+                        </div>
+                        <p class="text-gray-300 font-medium">Emmanuel De Jesus Astudillo Lopez</p>
+                        <p class="text-gray-400"><i class="fas fa-phone mr-1 text-brand-red"></i> <a href="tel:9613226687" class="hover:underline">961 322 6687</a></p>
+                        <p class="text-gray-400 truncate"><i class="fas fa-envelope mr-1 text-brand-red"></i> <a href="mailto:h3info@h3construcciones.mx" class="hover:underline">h3info@h3construcciones.mx</a></p>
+                        <div class="flex gap-2 pt-1 border-t border-zinc-800">
+                            <a href="https://www.facebook.com/share/18oJPCN4LH/" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="Facebook"><i class="fab fa-facebook-f text-[10px]"></i></a>
+                            <a href="https://www.instagram.com/h3construcciones_ct?mdxt=NmI1NXdreXljb25o" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="Instagram"><i class="fab fa-instagram text-[10px]"></i></a>
+                            <a href="https://www.tiktok.com/@h3.construcciones?_r=1&_t=ZS-9AOJsazvwqD" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="TikTok"><i class="fab fa-tiktok text-[10px]"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- H3 Grúas -->
+                    <div class="bg-zinc-900/60 p-3.5 rounded-xl border border-zinc-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <h6 class="font-bold text-white text-sm flex items-center gap-1.5">
+                                <i class="fas fa-truck-pickup text-brand-red"></i> H3 Grúas
+                            </h6>
+                        </div>
+                        <p class="text-gray-300 font-medium">Miguel Angel Cancino Reyes</p>
+                        <p class="text-gray-400"><i class="fas fa-phone mr-1 text-brand-red"></i> <a href="tel:9611425048" class="hover:underline">961 142 5048</a></p>
+                        <p class="text-gray-400 truncate"><i class="fas fa-envelope mr-1 text-brand-red"></i> <a href="mailto:h3gruasymontajes@h3construcciones.mx" class="hover:underline">h3gruasymontajes@h3construcciones.mx</a></p>
+                        <div class="flex gap-2 pt-1 border-t border-zinc-800">
+                            <a href="https://www.facebook.com/share/1LiFr6kRog/" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="Facebook"><i class="fab fa-facebook-f text-[10px]"></i></a>
+                            <a href="https://www.instagram.com/h3_gruas?cplk=Nm1rdnhseWlmbGJp" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="Instagram"><i class="fab fa-instagram text-[10px]"></i></a>
+                            <a href="https://www.tiktok.com/@h3.gruas.sol?_r=1&_t=ZS-9AOIqtXUNAC" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="TikTok"><i class="fab fa-tiktok text-[10px]"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- H3 Estructuras -->
+                    <div class="bg-zinc-900/60 p-3.5 rounded-xl border border-zinc-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <h6 class="font-bold text-white text-sm flex items-center gap-1.5">
+                                <i class="fas fa-cubes text-brand-red"></i> H3 Estructuras
+                            </h6>
+                        </div>
+                        <p class="text-gray-300 font-medium">Mario Alberto Cundapi De La Cruz</p>
+                        <p class="text-gray-400"><i class="fas fa-phone mr-1 text-brand-red"></i> <a href="tel:9612404415" class="hover:underline">961 240 4415</a></p>
+                        <p class="text-gray-400 truncate"><i class="fas fa-envelope mr-1 text-brand-red"></i> <a href="mailto:estructurasmetalicas@h3construcciones.mx" class="hover:underline">estructurasmetalicas@h3construcciones.mx</a></p>
+                        <div class="flex gap-2 pt-1 border-t border-zinc-800">
+                            <a href="https://www.facebook.com/share/19nsWwTbmu/" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="Facebook"><i class="fab fa-facebook-f text-[10px]"></i></a>
+                            <a href="https://www.instagram.com/h3.estructuras.met?dlrf=YzU0eWs4ZnljdDE5" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="Instagram"><i class="fab fa-instagram text-[10px]"></i></a>
+                            <a href="https://www.tiktok.com/@h3.estructuras.met?_r=1&_t=ZS-9AOIb81WbPY" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="TikTok"><i class="fab fa-tiktok text-[10px]"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- H3 Logística -->
+                    <div class="bg-zinc-900/60 p-3.5 rounded-xl border border-zinc-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <h6 class="font-bold text-white text-sm flex items-center gap-1.5">
+                                <i class="fas fa-truck-fast text-brand-red"></i> H3 Logística
+                            </h6>
+                        </div>
+                        <p class="text-gray-300 font-medium">Jairo Yair Perez Chanona</p>
+                        <p class="text-gray-400"><i class="fas fa-phone mr-1 text-brand-red"></i> <a href="tel:9612554269" class="hover:underline">961 255 4269</a></p>
+                        <p class="text-gray-400 truncate"><i class="fas fa-envelope mr-1 text-brand-red"></i> <a href="mailto:h3logistica@h3construcciones.mx" class="hover:underline">h3logistica@h3construcciones.mx</a></p>
+                        <div class="flex gap-2 pt-1 border-t border-zinc-800">
+                            <a href="https://www.facebook.com/share/1DH64yRAGV/" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="Facebook"><i class="fab fa-facebook-f text-[10px]"></i></a>
+                            <a href="https://www.instagram.com/h3.logistic.service?exln=ZHo5M3VzOWQwZHR5" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="Instagram"><i class="fab fa-instagram text-[10px]"></i></a>
+                            <a href="https://www.tiktok.com/@h3.logistic?_r=1&_t=ZS-9AOtpYWylsa" target="_blank" class="w-6 h-6 flex items-center justify-center bg-brand-red/10 text-brand-red hover:bg-brand-red hover:text-white rounded-full transition-colors" title="TikTok"><i class="fab fa-tiktok text-[10px]"></i></a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            
+
         </div>
         
-        <div class="w-full mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-800 text-center text-xs sm:text-sm text-gray-500">
-            <p>© 2025 GRUPO H3 - H3 Construcciones Contemporáneas. Todos los derechos reservados.</p>
+        <!-- Derechos de Autor -->
+        <div class="w-full mt-8 pt-6 border-t border-gray-800 text-center text-xs text-gray-500">
+            <p>© 2026 GRUPO H3 - H3 Construcciones Contemporáneas S.A. de C.V. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>

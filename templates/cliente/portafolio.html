@@ -10,7 +10,7 @@
         </div>
 
         <!-- Grid de Proyectos -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
             
             <!-- Proyecto 1 -->
             <div class="group relative bg-white dark:bg-brand-gray rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
@@ -109,6 +109,15 @@
             </div>
 
         </div>
-        
+
+        <!-- Botón de Descarga Adaptado -->
+        <div class="flex justify-center" data-aos="fade-up" data-aos-delay="100">
+            <a href="{% static 'pdf/portafolio.pdf' %}" download class="inline-flex items-center gap-3 bg-brand-red hover:bg-red-700 text-white font-bold text-sm sm:text-base px-8 py-4 rounded-xl shadow-lg hover:shadow-red-500/30 transform hover:-translate-y-1 transition-all duration-300 group">
+                <i class="fas fa-file-pdf text-xl group-hover:scale-110 transition-transform"></i>
+                <span>Descargar Portafolio de Obras</span>
+                <i class="fas fa-download text-sm group-hover:translate-y-0.5 transition-transform"></i>
+            </a>
+        </div>
+
     </div>
 </section>
