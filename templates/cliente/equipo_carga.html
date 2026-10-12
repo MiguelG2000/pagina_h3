@@ -327,13 +327,19 @@
 
         </div>
 
-        <!-- Botón Ver Todo / Ver Menos -->
-        <div class="text-center mt-10" data-aos="fade-up">
+        <!-- Botones de Acción: Ver Todo / Descargar Catálogo -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10" data-aos="fade-up" data-aos-delay="100">
             <button id="btn-ver-todo" 
-                    class="inline-flex items-center gap-2 bg-brand-red hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    class="inline-flex items-center gap-2 bg-brand-red hover:bg-red-700 text-white font-bold py-3.5 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm sm:text-base">
                 <span id="btn-texto">Ver todo</span>
                 <i id="btn-icono" class="fas fa-chevron-down transition-transform duration-300"></i>
             </button>
+
+            <a href="{% static 'pdf/catalogo_gruas.pdf' %}" download class="inline-flex items-center gap-3 bg-brand-red hover:bg-red-700 text-white font-bold text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-red-500/30 transform hover:-translate-y-0.5 transition-all duration-300 group">
+                <i class="fas fa-file-pdf text-xl group-hover:scale-110 transition-transform"></i>
+                <span>Descargar Portafolio de Grúas</span>
+                <i class="fas fa-download text-sm group-hover:translate-y-0.5 transition-transform"></i>
+            </a>
         </div>
     </div>
 </section>
