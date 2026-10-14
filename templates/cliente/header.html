@@ -11,21 +11,22 @@
 
                 <!-- Desplegable: Nuestros Servicios / Áreas de Negocio -->
                 <div class="relative group">
-                    <a href="#servicios" class="hover:text-brand-red font-semibold transition-colors text-sm xl:text-base flex items-center gap-1.5 py-2 focus:outline-none">
+                    <a href="#contacto" class="hover:text-brand-red font-semibold transition-colors text-sm xl:text-base flex items-center gap-1.5 py-2 focus:outline-none">
                         <span>Nuestros Servicios</span>
                         <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute top-full left-0 w-56 bg-white dark:bg-zinc-800 shadow-xl rounded-xl border border-gray-200 dark:border-zinc-700 py-2 hidden group-hover:block transition-all duration-200 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
-                        <a href="#servicios" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-brand-red hover:text-white transition-colors flex items-center gap-3 group/item">
-                            <i class="fas fa-truck-pickup text-brand-red group-hover/item:text-white w-5 transition-colors"></i> H3 Grúas
+                        <a href="#contacto" onclick="openAreaContact('Grúas', 'H3 Grúas')" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-brand-red hover:text-white transition-colors flex items-center gap-3 group/item">
+                            <img src="{% static 'images/grua_icon.png' %}" alt="Icono H3 Grúas" class="w-5 h-5 object-contain [filter:invert(23%)_sepia(87%)_saturate(6200%)_hue-rotate(352deg)_brightness(90%)_contrast(115%)] group-hover/item:brightness-0 group-hover/item:invert transition-all"> 
+                            <span>H3 Grúas</span>
                         </a>
-                        <a href="#servicios" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-brand-red hover:text-white transition-colors flex items-center gap-3 group/item">
+                        <a href="#contacto" onclick="openAreaContact('Estructuras', 'H3 Estructuras')" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-brand-red hover:text-white transition-colors flex items-center gap-3 group/item">
                             <i class="fas fa-cubes text-brand-red group-hover/item:text-white w-5 transition-colors"></i> H3 Estructuras
                         </a>
-                        <a href="#servicios" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-brand-red hover:text-white transition-colors flex items-center gap-3 group/item">
+                        <a href="#contacto" onclick="openAreaContact('Construcciones', 'H3 Construcciones')" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-brand-red hover:text-white transition-colors flex items-center gap-3 group/item">
                             <i class="fas fa-building text-brand-red group-hover/item:text-white w-5 transition-colors"></i> H3 Construcciones
                         </a>
-                        <a href="#servicios" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-brand-red hover:text-white transition-colors flex items-center gap-3 group/item">
+                        <a href="#contacto" onclick="openAreaContact('Logística', 'H3 Logística')" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-brand-red hover:text-white transition-colors flex items-center gap-3 group/item">
                             <i class="fas fa-truck-fast text-brand-red group-hover/item:text-white w-5 transition-colors"></i> H3 Logística
                         </a>
                     </div>
@@ -85,10 +86,18 @@
                 <i id="services-icon" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
             </button>
             <div id="mobile-services-menu" class="hidden pl-6 space-y-1 pb-3">
-                <a href="#servicios" onclick="closeMenu()" class="block py-2 px-4 text-sm font-medium hover:text-brand-red"><i class="fas fa-truck-pickup w-6 text-brand-red"></i> H3 Grúas</a>
-                <a href="#servicios" onclick="closeMenu()" class="block py-2 px-4 text-sm font-medium hover:text-brand-red"><i class="fas fa-cubes w-6 text-brand-red"></i> H3 Estructuras</a>
-                <a href="#servicios" onclick="closeMenu()" class="block py-2 px-4 text-sm font-medium hover:text-brand-red"><i class="fas fa-building w-6 text-brand-red"></i> H3 Construcciones</a>
-                <a href="#servicios" onclick="closeMenu()" class="block py-2 px-4 text-sm font-medium hover:text-brand-red"><i class="fas fa-truck-fast w-6 text-brand-red"></i> H3 Logística</a>
+                <a href="#contacto" onclick="closeMenu(); openAreaContact('Grúas', 'H3 Grúas');" class="py-2 px-4 text-sm font-medium hover:text-brand-red flex items-center gap-3 group/item">
+                    <img src="{% static 'images/grua_icon.png' %}" alt="Icono H3 Grúas" class="w-5 h-5 object-contain [filter:invert(23%)_sepia(87%)_saturate(6200%)_hue-rotate(352deg)_brightness(90%)_contrast(115%)] transition-all"> <span>H3 Grúas</span>
+                </a>
+                <a href="#contacto" onclick="closeMenu(); openAreaContact('Estructuras', 'H3 Estructuras');" class="block py-2 px-4 text-sm font-medium hover:text-brand-red">
+                    <i class="fas fa-cubes w-6 text-brand-red"></i> H3 Estructuras
+                </a>
+                <a href="#contacto" onclick="closeMenu(); openAreaContact('Construcciones', 'H3 Construcciones');" class="block py-2 px-4 text-sm font-medium hover:text-brand-red">
+                    <i class="fas fa-building w-6 text-brand-red"></i> H3 Construcciones
+                </a>
+                <a href="#contacto" onclick="closeMenu(); openAreaContact('Logística', 'H3 Logística');" class="block py-2 px-4 text-sm font-medium hover:text-brand-red">
+                    <i class="fas fa-truck-fast w-6 text-brand-red"></i> H3 Logística
+                </a>
             </div>
         </div>
 

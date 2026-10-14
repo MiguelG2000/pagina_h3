@@ -1,3 +1,4 @@
+{% load static %}
 <!-- Botones Flotantes (Globales) -->
 <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3">
     
@@ -12,7 +13,8 @@
                 <i class="fas fa-building text-brand-red w-4"></i> H3 Construcciones
             </button>
             <button onclick="selectQuickContact('H3 Grúas')" class="w-full text-left px-3 py-2 text-xs font-semibold rounded-lg hover:bg-brand-red hover:text-white transition-colors flex items-center gap-2">
-                <i class="fas fa-truck-monster text-brand-red w-4"></i> H3 Grúas
+                <img src="{% static 'images/grua_icon.png' %}" alt="Icono H3 Grúas" class="w-4 h-4 object-contain [filter:invert(23%)_sepia(87%)_saturate(6200%)_hue-rotate(352deg)_brightness(90%)_contrast(115%)] group-hover:brightness-0 group-hover:invert transition-all">
+                        <span>H3 Grúas</span>
             </button>
             <button onclick="selectQuickContact('H3 Logística')" class="w-full text-left px-3 py-2 text-xs font-semibold rounded-lg hover:bg-brand-red hover:text-white transition-colors flex items-center gap-2">
                 <i class="fas fa-truck text-brand-red w-4"></i> H3 Logística

@@ -25,7 +25,7 @@
 
                     <!-- H3 Grúas -->
                     <button onclick="openAreaContact('Grúas', 'H3 Grúas')" class="w-full bg-gray-50 dark:bg-brand-gray hover:bg-brand-red hover:text-white text-gray-800 dark:text-white font-semibold py-4 px-5 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 transition-all text-sm sm:text-base flex items-center justify-center gap-3 group">
-                        <i class="fas fa-truck-pickup text-brand-red group-hover:text-white text-lg transition-colors"></i> 
+                        <img src="{% static 'images/grua_icon.png' %}" alt="Icono H3 Grúas" class="w-6 h-6 object-contain [filter:invert(23%)_sepia(87%)_saturate(6200%)_hue-rotate(352deg)_brightness(90%)_contrast(115%)] group-hover:brightness-0 group-hover:invert transition-all">
                         <span>H3 Grúas</span>
                     </button>
 
@@ -78,8 +78,9 @@
             <input type="tel" id="modalPhone" placeholder="Tu Teléfono" required class="w-full bg-gray-50 dark:bg-brand-black border border-gray-300 dark:border-gray-700 rounded-lg p-2.5 text-xs text-gray-900 dark:text-white">
             <textarea id="modalMessage" rows="3" placeholder="Mensaje para esta área..." required class="w-full bg-gray-50 dark:bg-brand-black border border-gray-300 dark:border-gray-700 rounded-lg p-2.5 text-xs text-gray-900 dark:text-white"></textarea>
             
-            <button type="submit" class="w-full bg-brand-red hover:bg-brand-darkred text-white font-bold py-3 rounded-lg text-xs transition-colors shadow-md">
-                Contactar Área
+            <button type="submit" class="w-full bg-brand-red hover:bg-brand-darkred text-white font-bold py-3 rounded-lg text-xs transition-colors shadow-md flex items-center justify-center gap-2">
+                <i class="fab fa-whatsapp text-sm"></i>
+                <span>Enviar mensaje por WhatsApp</span>
             </button>
         </form>
 
@@ -94,6 +95,9 @@
 </div>
 
 <script>
+    // Variable global para rastrear la empresa actualmente activa en el modal
+    let currentEmpresaKey = 'H3 Construcciones';
+
     // Datos corporativos y redes por área/empresa
     const empresasInfo = {
         'H3 Construcciones': {
@@ -136,6 +140,7 @@
     };
 
     function openAreaContact(area, empresa) {
+        currentEmpresaKey = empresa;
         const modal = document.getElementById('areaContactModal');
         document.getElementById('modalAreaTitle').innerText = 'Contacto: ' + area;
         document.getElementById('modalEmpresaSub').innerText = empresa;
@@ -166,11 +171,31 @@
 
     function closeAreaModal() {
         document.getElementById('areaContactModal').classList.add('hidden');
+        // Limpiar campos del formulario
+        document.getElementById('modalName').value = '';
+        document.getElementById('modalPhone').value = '';
+        document.getElementById('modalMessage').value = '';
     }
 
     function submitAreaForm(e) {
         e.preventDefault();
-        alert('Mensaje enviado al área correspondiente.');
+        
+        const name = document.getElementById('modalName').value.trim();
+        const phone = document.getElementById('modalPhone').value.trim();
+        const userMsg = document.getElementById('modalMessage').value.trim();
+
+        const info = empresasInfo[currentEmpresaKey] || empresasInfo['H3 Construcciones'];
+        
+        // Limpiar espacios en blanco del teléfono para WhatsApp (añade prefijo 52 para México)
+        const cleanPhone = '52' + info.telefono.replace(/\D/g, '');
+
+        // Construcción del texto del mensaje
+        const whatsappText = `Hola, mi nombre es *${name}*.\nMi teléfono de contacto es *${phone}*.\n\nMe pongo en contacto con el área de *${currentEmpresaKey}*.\n\n*Mensaje:*\n${userMsg}`;
+
+        // Redireccionar a WhatsApp en una pestaña nueva
+        const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(whatsappText)}`;
+        window.open(waUrl, '_blank');
+
         closeAreaModal();
     }
 </script>
